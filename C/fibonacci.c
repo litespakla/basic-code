@@ -3,10 +3,10 @@
 #include <math.h>
 
 int fibonacci (int N){
-int a=1;
-int b=1;
+long int a=1;
+long int b=1;
 int c=1;
-int n;
+long int n;
 if (N<1) {
   printf("The Fibonacci %i doesn't exist\n", N);
 }
@@ -21,7 +21,7 @@ a=b;
 b=n;
 c++;
 }
-printf("\nThe %ith fibonacci number is: %i\n", N, a);
+printf("\nThe %ith fibonacci number is: %li\n", N, a);
 }
 return 0;
 }}
