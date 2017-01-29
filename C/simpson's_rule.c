@@ -2,9 +2,21 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define a 2.0  //Integration interval (a,b)
-#define b 10.0
-#define N 50.0  // N subintervals
+int integral (double a, double b, int N);
+
+int static parameters (){
+double a;
+double b;  //Integration interval (a,b)
+int N;
+  printf("\nIntegration interval?: ");
+  scanf("%lf %lf", &a, &b);
+
+  printf("\nHow many subintervals?: ");  // N subintervals
+  scanf("%i", &N);
+    printf("\nIntegration interval: [%g,%g]", a, b);
+integral(a, b, N);
+return 0;
+}
 
 double funcion (double x) //function
 {
@@ -12,7 +24,7 @@ double funcion (double x) //function
     return (f);
 }
 
-integral () //Integral with Simpson's rule
+int integral (double a, double b, int N) //Integral with Simpson's rule
 {
    /*double h=b-a;
    double I=(h/3)*(funcion(a)+4*funcion(a+h/2)+funcion(a+h))/2;*/ //Simpson's rule
@@ -24,13 +36,11 @@ integral () //Integral with Simpson's rule
     {
        I=I+(h/3)*(funcion(a+(h*n))+4*funcion(a+(h*n)+h/2)+funcion(a+h+h*n))/2;
     }
-     printf("Answer is: %g", I);
+     printf("\nAnswer is: %g\n", I);
+     return 0;
 }
 
-main()
-{
-    printf("Integration interval: [%g,%g]", a, b);
-    printf("\n");
-
-    integral();
+int main(){
+parameters();
+return 0;
 }
