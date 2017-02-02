@@ -19,7 +19,7 @@ int static operations(int n){
     if (ceil(a)-a==0 & ceil(b)-b==0){
       int j=ceil(a);
       int k=ceil(b);
-      printf("\nThe residue of a module b is: %i\n", j%k);
+      printf("\nThe residue of %g module %g is: %i\n",a, b, j%k);
     }
     break;
     case 1:
@@ -38,7 +38,7 @@ int static operations(int n){
   if (ceil(a)-a==0 & ceil(b)-b==0){
     int j=ceil(a);
     int k=ceil(b);
-    printf("\nThe residue of a module b is: %i\n", j%k);
+      printf("\nThe residue of %g module %g is: %i\n",a, b, j%k);
   }
   else{
     printf("\nLos números no son enteros\n");
