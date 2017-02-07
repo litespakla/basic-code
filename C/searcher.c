@@ -1,17 +1,60 @@
 #include<stdio.h>
 
-int secondBiggest(int *arr, int size){
+int static secondBiggest(int *arr, int size){
    static int i;
    int j=arr[0];
-   int k=arr[1];
-   if (size>2){
-   for (i=2; i<size; i++){
+   if (size==1){
+     printf("You only input one number. There's no second biggest number\n");
+   }
+   else{
+   for (i=1; i<size; i++){
    j=biggest(j, arr[i]);
-   k=biggest(k, arr[i]);
- }}
- k=biggest(j, k);
+ }
+ for (i=0; i<size; i++){
+   if (arr[i]==j){
+     arr[i]=-10000000;
+   }
+ }
+ j=-10000000;
+ for (i=0; i<size; i++){
+ j=biggest(j, arr[i]);
+}
    printf("The second biggest element is %i\n", j);
+ }
    return 0;
+}
+
+int printer (int *s, int size){
+static int i;
+static int j;
+for (i=1; i<size; i++){
+  if (s[i]!=-10000000){
+    for (j=i+1; j<size; j++){
+      if(s[i]==s[j]){
+        s[j]=-10000000;
+      }
+    }
+  }
+}
+  printf("\nNon-repeated elements of the array are: ");
+for (i=0; i<size; i++){
+  if(s[i]!=-10000000){
+printf("%i ", s[i]);
+}}
+  printf("\n");
+return 0;
+}
+
+int search (int *z, int size, int B){
+int static i;
+  printf("\nThe number are located in the positions: ");
+  for (i=0; i<size; i++){
+    if(z[i]==B){
+      printf("Array[%i]", i+1);
+    }
+  }
+  printf("\n");
+  return 0;
 }
 
 int biggest(int a, int b){
@@ -29,12 +72,17 @@ int array (){
   int a[n];
   int i;
   int N;
+  int B;
   printf("Enter %i numbers\n", n);
   for(i=0; i<n; i++)
   {
      scanf("%d", &a[i]);
   }
+  printf("\nWhat number do you want to find?: ");
+  scanf("%i", &B);
 secondBiggest(a, n);
+printer(a, n);
+search(a, n, B);
 return 0;
 }
 
