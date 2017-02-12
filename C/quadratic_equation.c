@@ -4,7 +4,7 @@
 
 int quadratic (double a, double b, double c);
 
-int solution(){
+int solution(){ //Input the coefficients of the equation
 double a;
 double b;
 double c;
@@ -21,12 +21,12 @@ return 0;
 int quadratic (double a, double b, double c){
 double d;
 double e;
-d=pow(b,2)-4*a*c;
+d=pow(b,2)-4*a*c; //Determinant of the equation
 if (d<0){
 printf("\nEquation has no real roots\n");
 }
 
-else{
+else{ //Solutions of the equation
     e=(-b+sqrt(d))/(2*a);
     d=(-b-sqrt(d))/(2*a);
     printf("\nThe roots of the quadratic equation are:\nX1 = %g\nX2 = %g\n", e, d);
