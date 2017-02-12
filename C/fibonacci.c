@@ -2,16 +2,16 @@
 #include <stdlib.h>
 #include <math.h>
 
-int fibonacci (int N){
+int fibonacci (int N){  //Finds the nth fibonacci number
 long int a=1;
 long int b=1;
 int c=1;
 long int n;
-if (N<1) {
+if (N<1) {  //If the input number is not a positive integer
   printf("The Fibonacci %i doesn't exist\n", N);
 }
 else {
-if (c==N){
+if (c==N){ //If N=1
 printf("\nThe first Fibonacci number is 1\n");
 }
 else {
