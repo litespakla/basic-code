@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-int static operations(int n){
+int static operations(int n){ //Code is self-explanatory
   double a;
   double b;
   printf("\nEnter a number a: ");
@@ -16,7 +16,7 @@ int static operations(int n){
     printf("\nThe rest is: %g", a-b);
     printf("\nThe multiplication is: %g", a*b);
     printf("\nThe division is: %g", a/b);
-    if (ceil(a)-a==0 & ceil(b)-b==0){
+    if (ceil(a)-a==0 & ceil(b)-b==0){ //This is if the numbers input are not integers
       int j=ceil(a);
       int k=ceil(b);
       printf("\nThe residue of %g module %g is: %i\n",a, b, j%k);
