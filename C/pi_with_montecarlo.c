@@ -19,7 +19,7 @@ scanf("%i", &N);
 printf("Lenght of the needles?: ");
 scanf("%lf", &L);
 
-  while(i<N){
+  while(i<N){ //Simulates the experiment of Buffon's needles to aproximate Pi
 
     double p=((float)rand()/(float)(RAND_MAX))*L;
     double a=((float)rand()/(float)(RAND_MAX))*PI/2;
