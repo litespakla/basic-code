@@ -1,0 +1,1212 @@
+#El "#" al inicio de una línea es para comentar el archivo.
+#Los espacios en blanco no afectan, pues no son tomados en cuenta.
+
+#Parámetros de la pantalla de inicio del juego.
+TITULO_DEL_JUEGO: Tripeando: Eléctrica
+ANCHO: 900
+LARGO: 680
+
+#La caja es el ancho de la ventana donde imprime el texto
+CAJA: 150
+MUSICA: Música/undertale.ogg
+IMAGENES: Imágenes/electrica12.jpg
+VENTANA_DE_TEXTO: Imágenes/frame1.png
+FUENTE: gentiumbasic
+
+#El color de fuente debe estar en formato RGB
+COLOR_TEXTO: 0 0 0
+COLOR_NOMBRE: 0 255 0
+COLOR_BOTONES: 255 255 0
+COLOR_MENU: 255 255 255
+COLOR_SELECCION: 255 0 0
+
+#Cambia el tamaño de la letra
+TAMANO_LETRA_MENU: 90
+TAMANO_LETRA_TEXTO: 20
+TAMANO_LETRA_NOMBRE: 32
+TAMANO_LETRA_OPCIONES: 30
+
+#El "@" es el marcador de la pantalla de inicio del juego
+@
+
+#Personajes
+personaje 1: Narrador
+personaje 2: Tú
+personaje 3: Mujer
+personaje 4: Antepasado
+personaje 5: Tulevieja
+personaje 6: Pisuicas
+personaje 7: Nikola Tesla
+-
+
+#Historia
+
+
+
+/ 0
++musica: Música/undertale.ogg 2000
++imagen: Imágenes/electrica12.jpg
++p. 1 Personajes/friki.jpg
+Son las 9:00 pm y estás en la entrada del edifico de eléctrica.
+Joder, si tenías que ir a corregir la nota a las 3:00pm y te vas a quedar sin futuro.
+Puedes ver unas luces encendidas.
+La puerta cerrada y la piedra en forma de huevo.
++p. 2 Personajes/goku.jpg
+¿Qué voy a hacer?
+*
+1. Abrir entrada / 1
+2. Llamar a gritos para que abran / 2
+3. Sentarte en el huevo a llorar / 3
+*
+/
+
+/ 1
+#Evento Abrirentrada (Trancisión)
++musica: Música/undertale.ogg 88
++imagen: Imágenes/puerta.jpg
++p. 1 Personajes/friki.jpg
+Intentas abrir pero está cerrado.
+La puerta no se mueve pero parece haber gente dentro del edificio.
++p. 2 Personajes/goku.jpg
+¿Qué voy a hacer?
+*
+1. Llamar a gritos para que abran / 2
+2. Sentarte en el huevo a llorar / 6
+*
+/
+
+/ 2
+#Evento Llamaragritosparaqueabran (Trancision)
++musica: Música/undertale.ogg 120
++imagen: Imágenes/electrica.jpg
++p. 1 Personajes/friki.jpg
+Gritas para que te abran el edificio pero nadie responde.
+En fin, si de igual manera nadie te va a querer abrir.
+*
+1. Abrir entrada / 1
+2. Sentarte en el huevo a llorar / 5
+*
+/
+
+/ 3
+#Evento Sentarteenelhuevoallorar0 (FINAL)
++musica: Música/undertale.ogg 144
++imagen: Imágenes/electrica3.jpg
++p. 1 Personajes/friki.jpg
+Al igual que nadie sabe cómo llego la piedra en forma de huevo al edificio de eléctrica.
+Nadie sabe cómo lograste entrar a la carrera.
++p. 2 Personajes/goku.jpg
+No soy nada.
++p. 1 Personajes/friki.jpg
+Te quedas dormido esperando en el huevo.
+¿Quieres despertar? ¿Crees que valga la pena hacerlo?
+*
+1. Sí / 4
+2. No / 55
+*
+/
+
+/ 4
+#Evento Sentarteenelhuevoallorar1 (Trancision)
++musica: Música/undertale.ogg 202
++imagen: Imágenes/electrica3.jpg
++p. 2 Personajes/goku.jpg
+Me voy a sentar en el huevo.
+Ni modo, el huevo me dice que lo empolle.
+¿De verdad quiero hacerlo? No parece buena idea
+*
+1. Si / 5
+2. Llamar a gritos para que abran / 2
+3. Esperar que algo pase / 17
+4. Salir huyendo / 33
+*
+/
+
+
+
+/ 5
+#Evento Sentarteenelhuevoallorar1Si (FINAL)
++musica: Música/undertale.ogg 294
++imagen: Imágenes/electrica3.jpg
++p. 1 Personajes/friki.jpg
+Mientras estas llorando y empollando el huevo, éste se mueve.
+Como está calentito te quedas ahí (te gustó, ¿eh?).
+Al día siguiente aparece otra piedra en forma de huevo.
+Estás condenado a quedarte como piedra el resto de tu vida.
+En fin, por lo menos estás acostumbrado...
+Jaja.
+¿Quieres volver a empezar?
+*
+1. Sí / 0
+2. No & 0
+*
+/
+
+/ 6
+#Evento Sentarteenelhuevoallorar2 (Trancision)
++musica: Música/undertale.ogg 351
++imagen: Imágenes/electrica10.jpg
++p. 1 Personajes/friki.jpg
+Estás demente, el huevo te escucha llorando y te quiere dejar entrar.
++p. 2 Personajes/goku.jpg
+¿Le haces caso?
+*
+1. Sí / 47
+2. Abrir entrada / 1
+3. Llamar a gritos para que abran / 2
+*
+/
+
+/ 7
+#Evento Sentarteenelhuevoallorar2Si (Trancision)
++musica: Música/undertale.ogg 373
++imagen: Imágenes/circ.jpg
++p. 1 Personajes/friki.jpg
+De repente te sientes en otra dimensión.
+¡ESTÁS EN LA RED ELECTRICA!
+Serás gordo, si pesas 5Tb hasta en el entorno virtual.
+Puedes ver las conexiones que existen en la red.
+Hay tres redes activas.
+¿A cúal quieres entrar?
+*
+1. Red 1 / 8
+2. Red 2 / 13
+3. Red 3 / 15
+4. Apagar la red / 19
+*
+/
+
+/ 8
+#EventoRed1 (Trancision)
++musica: Música/undertale.ogg 447
++imagen: Imágenes/oficina2.jpg
++p. 1 Personajes/friki.jpg
+Puedes ver desde la cámara.
+JODER, estás en el 5to piso.
+Está oscuro pero alcanzas a ver partes de la oficina.
+En unos folders alcanzas a ver tres combinaciones de tres números:
+696, 100, 666 y gravityPiExtremeXDXD.
+En una esquina hay ...
+¡UN CUERPO!
+O al menos eso parece, dentro de él se ven salir cables y una placa:
+"Mauricio"
+Desde el otro lado de la habitación una persona está de espaldas.
+Ya es oscuro pero alcanzas a ver que falta cabello en la coronilla.
+Dentro del computador existen registros de notas.
+Puedes cambiar las notas si lo deseas.
+Tambíen irte a otra red.
+¿Qué quieres hacer?
+*
+1. Cambiar las notas / 21
+2. Ir a la Red 2 / 13
+3. Ir a la Red 3 / 15
+4. ¿POR QUÉ HAY 4 COMBINACIONES EN LUGAR DE 3? / 20
+*
+/
+
+/ 9
+#EventoCambiarnotas (Trancision)
++musica: Música/undertale.ogg 503
++imagen: Imágenes/notas.jpg
++p. 1 Personajes/friki.jpg
+Te quieres pasar de listo, ¿eh?
+Puedes pasar a todos o quedarlos.
+¿Qué quieres hacer?
+*
+1. Pasar a todos / 11
+2. Quedarlos a todos / 10
+*
+/
+
+/ 10
+#EventoQuedaratodos (Trancision)
++musica: Música/undertale.ogg 678
++imagen: Imágenes/notas.jpg
++p. 1 Personajes/friki.jpg
+¡Si odias a todos!
+¡Qué reprueben el curso!
+Empiezas a ver al cuerpo...
+¡¿SONRIENDO!?
+No ves otra cosa que hacer.
+*
+1. Ir a la Red 2 / 13
+2. Ir a la Red 3 / 15
+*
+/
+
+/ 11
++musica: Música/undertale.ogg 909
++imagen: Imágenes/notas.jpg
++p. 1 Personajes/friki.jpg
+#EventoPasaratodos (Trancision)
+Quieres hacer que todos te quieran, empiezas a elevar notas.
+El semicalvo se molesta, parece sufrir un ataque de furia y.....
+Y....
+¿Desaparece?
+¿Quieres continuar o ir a otra dirección de la red?
+*
+1. Continuar cambiando notas / 12
+2. Ir a la Red 2 / 13
+3. Ir a la Red 3 / 16
+*
+/
+
+/ 12
++musica: Música/undertale.ogg 959
++imagen: Imágenes/elec.jpg
++p. 1 Personajes/friki.jpg
+#EventoContinuarcambiandonotas (FINAL)
+De repente no puedes ver a la habitación, alguien apagó la cámara...
+TE ARRASTRAN A UNA CARPETA...
+"Facilísimo..."
+Quedas guardado en una llave USB por el resto de tu vida.
+De todos modos nadie te va a extrañar.
+¿Quieres comenzar de nuevo?
+*
+1. Sí / 0
+2. No & 0
+*
+/
+
+/ 13
++musica: Música/undertale.ogg 992
++imagen: Imágenes/elec.jpg
++p. 1 Personajes/friki.jpg
+#EventoRed2 (Trancision)
+No puedes ver dónde estás.
+No hay ninguna cámara, pero detectas un micrófono.
+¿Qué quiere hacer?
+*
+1. Activar micrófono / 14
+2. Ir a Red 3 / 16
+*
+/
+
+
+/ 14
+#EventoActivarmicro
++musica: Música/undertale.ogg 1096
++imagen: Imágenes/audiowave2.jpg
++p. 1 Personajes/friki.jpg
+Activas la grabación del sistema...
+Escuchas mucho ruido, lapiceros cayendo, teclas, el sonido de un delfín...
+luego silencio....
+por último...
+|Una puerta se cierra...
+Ya no oyes nada.
+*
+1. Ir a la Red 3 / 15
+2. Volver a encender micrófono / 14
+3. Ir a la Red 1 / 8
+*
+/
+
+/ 15
+#Evento Red3
++musica: Música/undertale.ogg 1177
++imagen: Imágenes/darkclassroom.jpg
++p. 1 Personajes/friki.jpg
+No hay nada en esta habitación.
+Al fondo ves dos siluetas entrando...
+(Y unas manos en lugares extra, ya no hay temor de Dios)
+*
+1. Ir a la Red 2 / 13
+2. Ir a la Red 1 / 8
+*
+/
+
+/ 16
++musica: Música/undertale.ogg 1215
++imagen: Imágenes/desk.jpg
++p. 1 Personajes/friki.jpg
+#EventoIraRed3
+Puedes ver claramente desde la cámara.
+La habitación tiene las luces encendidas.
+Ves en el escritorio que la nota fue corregida.
+Para nada quedaste atrapado en la red.
+Ahora necesitas salir de aquí
+*
+1. Rendirme & 0
+2. Usar la Ouija parar invocar al antepasado / 56
+*
+/
+
+/ 17
++musica: Música/undertale.ogg 1291
++imagen: Imágenes/electrica10.jpg
++p. 1 Personajes/friki.jpg
+No pasa nada.
+*
+1. Llamar a gritos para que abran / 2
+2. Esperar que algo pase / 17
+3. Salir huyendo / 33
+*
+/
+
+/ 18
++musica: Música/undertale.ogg 1341
++imagen: Imágenes/electrica14.jpg
++p. 1 Personajes/friki.jpg
+Tesla te da una oportunidad y regresa al huevo.
+Eso estuvo cerca
+*
+1. Cambiar las notas / 9
+2. Usar la Ouija / 62
+*
+/
+
+/ 19
++musica: Música/undertale.ogg 1399
++imagen: Imágenes/elec.jpg
++p. 1 Personajes/friki.jpg
+Has apagado la red.
+¿Qué quieres hacer?
+*
+1. Encender la red / 7
+2. Nada & 0
+*
+/
+
+/ 20
++musica: Música/undertale.ogg 1516
++imagen: Imágenes/elec.jpg
++p. 1 Personajes/friki.jpg
+¡PORQUE ME DA LA REGALADA GANA!
+¿Qué quieres hacer?
+*
+1. Cambiar las notas / 21
+2. Ir a la Red 2 / 13
+3. Ir a la Red 3 / 15
+4. ¡PERO QUIERO SABER POR QUÉ HAY 4 COMBINACIONES EN LUGAR DE 3! / 20
+*
+/
+
+/ 21
++musica: Música/undertale.ogg 1542
++imagen: Imágenes/numeros3.jpg
++p. 1 Personajes/friki.jpg
+La computadora te pide una contraseña de 3 números.
+¿Qué escribes?
+*
+1. Nada & 0
+2. 696 / 26
+3. 100 / 26
+4. 666 / 25
+5. gravityPiExtremeXDXD / 22
+*
+/
+
+/ 22
++musica: Música/undertale.ogg 1578
++imagen: Imágenes/electrica9.jpg
++p. 1 Personajes/friki.jpg
+¡Logras iniciar sesión en la RED ELÉCTRICA!
+¿Qué quieres hacer?
+*
+1. Cambiar las notas / 9
+2. DESTRUIR INGENIERÍA ELÉCTRICA / 24
+3. Suave un toque. ¿La contraseña no eran números? / 23
+*
+/
+
+/ 23
++musica: Música/undertale.ogg 1658
++imagen: Imágenes/electrica9.jpg
++p. 1 Personajes/friki.jpg
+Sí y qué.
+¿Crees que es fácil escribir una aventura de texto?
+Escribe la tuya en lugar de estar criticando las de otros.
+*
+1. Seguir jugando / 21
+2. Dejar de jugar & 0
+*
+/
+
+/ 24
++musica: Música/undertale.ogg 1718
++imagen: Imágenes/electrica3.jpg
++p. 1 Personajes/friki.jpg
+TU IMPRUDENCIA HA DESPERTADO AL LEGENDARIO GUARDIÁN DE INGENIERÍA ELÉCTICA....
+¡EL HUEVO!
+El huevo revela su verdadera forma....
+TESLA
++p. 7 Personajes/tesla.jpg
+Prepárate a ser destruido
+*
+1. Rogar por misericordia / 18
+2. Aceptar tu destino y MORIR & 0
+*
+/
+
+/ 25
++musica: Música/undertale.ogg 1831
++imagen: Imágenes/inf2.jpg
++p. 1 Personajes/friki.jpg
+CLAVE ACEPTADA
+INVOCANDO A SATANÁS...
+Satanás se encuentra ocupado en este momento.
+Por favor llame más tarde
+*
+1. Intentar contactar al Pisuicas / 28
+2. Intentar contactar a la Tulevieja / 30
+3. Cambiar las notas / 9
+*
+/
+
+/ 26
++musica: Música/undertale.ogg 1859
++imagen: Imágenes/numeros4.jpg
++p. 1 Personajes/friki.jpg
+CONTRASEÑA INCORRECTA
+Te queda un intento.
+*
+1. 696 / 27
+2. 100 / 27
+3. 666 / 25
+4. gravityPiExtremeXDXD / 22
+*
+/
+
+/ 27
++musica: Música/undertale.ogg 1890
++imagen: Imágenes/fuego.jpg
++p. 1 Personajes/friki.jpg
+CONTRASEÑA INCORRECTA.
+ACTIVANDO SEGURIDAD...
+La computadora estalla en tu cara.
+Mueres.
+¿Quieres volver a empezar?
+*
+1. Sí / 0
+2. No & 0
+*
+/
+
+/ 28
++musica: Música/undertale.ogg 1965
++imagen: Imágenes/dark.jpg
++p. 1 Personajes/friki.jpg
+INVOCANDO AL PISUICAS
+El Pisuicas no está disponible en este momento.
+Por favor intente más tarde.
+*
+1. Intentar contactar a la Tulevieja / 30
+2. Intentar contactar a Satanás / 29
+3. Cambiar las notas / 9
+*
+/
+
+/ 29
++musica: Música/undertale.ogg 1990
++imagen: Imágenes/dark.jpg
++p. 1 Personajes/friki.jpg
+INVOCANDO A SATANÁS...
+Satanás se encuentra ocupado en este momento.
+Por favor llame más tarde.
+*
+1. Intentar contactar al Pisuicas / 28
+2. Cambiar las notas / 9
+3. Intentar contactar a la Tulevieja / 30
+*
+/
+
+/ 30
++musica: Música/undertale.ogg 2157
++imagen: Imágenes/dark2.png
++p. 1 Personajes/friki.jpg
+¡LA TULEVIEJA TE CONTESTA!
+¿Qué quieres hacer?
+*
+1. Decir Hola / 31
+2. Nada & 0
+3. Pedirle ayuda para cambiar tu nota / 61
+*
+/
+
+/ 31
++musica: Música/undertale.ogg 2199
++imagen: Imágenes/dark2.png
++p. 1 Personajes/friki.jpg
+La Tulevieja te dice hola.
+¿Qué quieres hacer?
+*
+1. Decir Hola / 31
+2. Nada & 0
+3. Pedirle ayuda para cambiar tu nota / 61
+*
+/
+/32
+#Evento muerte aplastado por piedra
++musica: Música/undertale.ogg 572
++imagen: Imágenes/electrica3.jpg
++p. 1 Personajes/friki.jpg
+El huevo tiembla y la piedra te aplasta mientras duermes.
+¿Quieres volver a empezar?
+*
+1. Sí / 0
+2. No & 0
+*
+/
+
+/ 33
+# Evento Huir
++musica: Música/undertale.ogg 1202
++imagen: Imágenes/electrica5.jpg
++p. 1 Personajes/friki.jpg
+Mientras corres, empiezas a meditar sobre tu vida
++p. 2 Personajes/goku.jpg
+¿Qué estoy haciendo?
+¿Voy a seguir arruinando mi vida por ser un cobarde?
+Si no cambio la nota, voy a seguir siendo un fracasado
++p. 1 Personajes/friki.jpg
+¿Qué vas a hacer?
+*
+1. Dejar de correr para pensar / 34
+2. Volver a eléctrica para cambiar la nota / 41
+3. Seguir corriendo / 43
+*
+/
+/ 34
+# Evento dejar de correr
++musica: Música/undertale.ogg 1202
++imagen: Imágenes/electrica5.jpg
++p. 1 Personajes/friki.jpg
+Cuando te detienes, ves a lo lejos una persona caminando por la calle
+Normalmente no socializas
+Pero ya no sabes qué hacer
++p. 2 Personajes/goku.jpg
+¿Qué hago?
+*
+1. Acercarse a la persona / 35 
+2. Volver a eléctrica / 42
+3. Seguir corriendo / 43
+*
+/
+/ 35
+# Evento acercarse desconocido
++musica: Música/undertale.ogg 1302
++imagen: Imágenes/dark.jpg
++p. 1 Personajes/friki.jpg
+Caminas lentamente
+Vas acercándote tímidamente a la persona
+...
+Es una mujer
+Intentas asegurarte de que no te va a hacer daño
+Y cuando ya estás demasiado cerca 
+Notas que la mujer no te ve muy amigablemente
+¿Qué haces?
+*
+1. Hablarle / 36 
+2. Volver a eléctrica / 42
+3. Seguir corriendo / 43
+*
+/
+/ 36
+# Evento hablar desconocido
++musica: Música/undertale.ogg 472
++imagen: Imágenes/dark3.jpg
++p. 1 Personajes/friki.jpg
+Cuando le vas a hablar, la mujer te mira con desprecio
+Sientes miedo, pero continúas
++p. 2 Personajes/goku.jpg
+¿Qué le digo?
+*
+1. Pedirle ayuda / 37 
+2. Nada y salir corriendo/ 44
+*
+/
+/ 37
+# Evento pedir consejo desconocido
++musica: Música/undertale.ogg 1412
++imagen: Imágenes/dark3.jpg
++p. 1 Personajes/friki.jpg
+La saludas y le cuentas tu situación
++p. 3 Personajes/mujer.jpg
+Si realmente no quieres arruinar tu vida
+Debes volver al edificio de eléctrica
+Y así cambiar tu nota
++p. 2 Personajes/goku.jpg
+Pero no puedo entrar al edificio
+¿Cómo voy a cambiar la nota?
++p. 3 Personajes/mujer.jpg
+Cuenta la leyenda que si contactas a los antepasados fundadores de la escuela de ingeniería eléctrica
+Ellos de dejaran entrar al edificio
++p. 1 Personajes/friki.jpg
+La mujer te entrega una Ouija para que contactes a los antepasados
+¿Le haces caso a la mujer?
+*
+1. Sí / 38 
+2. No / 45
+*
+/
+/ 38
+# Evento ouija
++musica: Música/undertale.ogg 372
++imagen: Imágenes/ouija.jpg
++p. 1 Personajes/friki.jpg
+Corres de vuelta a la entrada de eléctrica
+Ahí empiezas a usar la Ouija
+No estás seguro de si va a funcionar
+Cuando de pronto
+...
+¡¡¡LOGRAS CONTACTAR A UN ESPÍRITU!!!
+¿Qué le quieres preguntar?
+*
+1. ¿Cómo puedo entrar al edificio? / 39 
+2. Nada / 46
+3. ¿Eres realmente un fundador de la escuela? / 54
+*
+/
+/ 39
+# Evento antepasado
++musica: Música/undertale.ogg 1372
++imagen: Imágenes/ouija.jpg
++p. 4 Personajes/antepasado.jpg
+Para entrar al edificio de eléctrica
+Solamente debes sentarte sobre el huevo
+Cerrar los ojos
+Y repetir 6 veces "Tesla"
+¡Y listo!
+*
+1. Obedecer al espíritu / 40 
+2. Huir / 44
+*
+/
+
+/ 40
+#Evento Red electrica con la ouija
++musica: Música/undertale.ogg 571
++imagen: Imágenes/circ.jpg
++p. 1 Personajes/friki.jpg
+Te sientas sobre el huevo 
++p. 2 Personajes/goku.jpg
+Tesla 
+Tesla 
+Tesla 
+Tesla 
+Tesla 
+Tesla
+...
++p. 1 Personajes/friki.jpg
+De repente te sientes en otra dimensión.
+¡ESTÁS EN LA RED ELECTRICA!
+Serás gordo, si pesas 5Tb hasta en el entorno virtual.
+Puedes ver las conexiones que existen en la red.
+Hay tres redes activas.
+¿A cúal quieres entrar?
+*
+1. Red 1 / 8
+2. Red 2 / 13
+3. Red 3 / 15
+4. Apagar la red / 19
+*
+/
+/ 41
+#Evento hablar deconocido2
++musica: Música/undertale.ogg 431
++imagen: Imágenes/electrica5.jpg
++p. 1 Personajes/friki.jpg
+Camino al edificio de eléctrica
+Ves a una misteriosa mujer caminando por la calle
+¿Qué quieres hacer?
+*
+1. Hablarle / 36
+2. Seguir caminando / 42
+*
+/
+/ 42
+#Evento seguir caminando
++musica: Música/undertale.ogg 1571
++imagen: Imágenes/electrica5.jpg
++p. 1 Personajes/friki.jpg
+Vuelves a la entrada del edificio de eléctrica
++p. 2 Personajes/goku.jpg
+¿Qué hago?
+*
+1. Intentar abrir / 1
+2. Llamar a gritos / 2
+*
+/
+/ 43
+#Evento seguir corriendo
++musica: Música/undertale.ogg 1771
++imagen: Imágenes/electrica5.jpg
++p. 1 Personajes/friki.jpg
+Cuando estás corriendo
+Tropiezas y mueres
+Mueres huyendo como un cobarde
+¿Quieres jugar de nuevo?
+*
+1. Sí / 0
+2. No & 0
+*
+/
+/ 44
+#Evento seguir corriendo
++musica: Música/undertale.ogg 1811
++imagen: Imágenes/electrica5.jpg
++p. 1 Personajes/friki.jpg
+Cuando estás corriendo
+Tropiezas y mueres
+Mueres huyendo como un cobarde
+¿Quieres jugar de nuevo?
+*
+1. Sí / 0
+2. No & 0
+*
+/
+
+/ 45
+#Evento no hacer caso a la mujer
++musica: Música/undertale.ogg 391
++imagen: Imágenes/electrica12.jpg
++p. 2 Personajes/goku.jpg
+Como soy un cobarde
+Decidí quemar la Ouija
+Voy a volver a la entrada del edificio
+Pero ya no sé cómo voy a entrar 
+¿Qué hago?
+*
+1. Intentar abrir / 1
+2. Llamar a gritos / 2
+*
+/
+
+/ 46
+#Evento Nada con espiritu
++musica: Música/undertale.ogg 1671
++imagen: Imágenes/electrica5.jpg
++p. 4 Personajes/antepasado.jpg
+ME INVOCASTE PARA NADA???
+Me estás haciendo perder el tiempo
+Ahora debes pagar por lo que me has hecho
+Te voy a enviar a un lugar muy distinto del mundo que conoces
+Y para alguien como tú no va a ser tan fácil escapar
+Así vas a aprender la lección
+*
+1. Rogar por perdón / 53
+2. Aceptar tu destino / 7
+*
+/
+
+/ 47
+#Evento Huevo invocar espiritu
++musica: Música/undertale.ogg 771
++imagen: Imágenes/electrica10.jpg
++p. 1 Personajes/friki.jpg
+El huevo te dice que para entrar a eléctrica 
+Debes contactar a algún antepasado fundador de la escuela
+Para hacerlo necesitas conseguir una Ouija
++p. 2 Personajes/goku.jpg
+¿Busco una Ouija?
+*
+1. Sí / 48
+2. No / 52
+*
+/
+
+/ 48
+#Evento Buscar ouija
++musica: Música/undertale.ogg 251
++imagen: Imágenes/electrica5.jpg
++p. 1 Personajes/friki.jpg
+Corres desesperadamente por la calle buscando una Ouija
+Ves a una misteriosa mujer caminando por la calle
+¿Qué quieres hacer?
+*
+1. Hablarle / 49
+2. Volver al edificio de eléctrica como un cobarde / 42
+*
+/
+
+
+/ 49
+# Evento hablar desconocido2
++musica: Música/undertale.ogg 472
++imagen: Imágenes/dark3.jpg
++p. 1 Personajes/friki.jpg
+Cuando le vas a hablar, la mujer te mira con desprecio
+Sientes miedo, pero continúas
++p. 2 Personajes/goku.jpg
+¿Qué le digo?
+*
+1. Pedirle ayuda / 50 
+2. Salir corriendo / 44
+*
+/
+/ 50
+# Evento pedir consejo desconocido2
++musica: Música/undertale.ogg 312
++imagen: Imágenes/dark3.jpg
++p. 1 Personajes/friki.jpg
+Le cuentas tu situación
++p. 3 Personajes/mujer.jpg
+Si realmente no quieres arruinar tu vida
+Debes volver al edificio de eléctrica
+Y así cambiar tu nota
++p. 2 Personajes/goku.jpg
+Pero no puedo entrar al edificio sin una Ouija
+¿Cómo voy a cambiar la nota?
++p. 3 Personajes/mujer.jpg
+Fabrica una con este pedazo de madera
++p. 1 Personajes/friki.jpg
+La mujer te entrega un pedazo de madera
+¿Qué haces con el?
+*
+1. Hacer una Ouija / 51
+2. Nada, ya no tengo ganas de invocar espíritus / 52
+3. Botarlo y después salir corriendo / 44
+*
+/
+/ 51
+# Evento hacer ouija
++musica: Música/undertale.ogg 1412
++imagen: Imágenes/ouija.jpg
++p. 1 Personajes/friki.jpg
+Como eres un cobarde
+Te da miedo hacer una Ouija
+Pero lo haces porque quieres cambiar tu nota
+Y si no la cambias
+Vas a arruinar tu futuro
++p. 2 Personajes/goku.jpg
+¡¡Ya terminé de hacer la Ouija!!
+¿Ahora qué hago con ella?
+*
+1. Contactar a un espíritu para que te ayude / 38
+2. Nada, ya no quiero invocar espíritus / 52
+3. Botarla y después salir corriendo / 44
+*
+/
+
+/ 52
+# Evento volver
++musica: Música/undertale.ogg 1572
++imagen: Imágenes/electrica4.jpg
++p. 1 Personajes/friki.jpg
+Estás en la entrada del edificio de eléctrica
+¿Qué quieres hacer?
+*
+1. Intentar abrir puerta / 1 
+2. Llamar a gritos para que abran / 2
+3. Salir corriendo / 44
+*
+/
+
+
+/ 53
+# Evento castigo2
++musica: Música/undertale.ogg 172
++imagen: Imágenes/inf2.jpg
++p. 4 Personajes/antepasado.jpg
+Rogar por perdón es inútil
+Igual que tú
+No te voy a perdonar
++p. 2 Personajes/goku.jpg
+¡Oh no!
+¿Qué hago?
+*
+1. Aceptar destino / 7
+2. Salir corriendo / 44
+*
+/
+
+/ 54
+# Evento castigo3
++musica: Música/undertale.ogg 1372
++imagen: Imágenes/inf2.jpg
++p. 4 Personajes/antepasado.jpg
+¿¿¿ME ESTÁS PONIENDO EN DUDA???
+¿¿¿TE CREES DIGNO DE HACER TAL COSA???
+Ahora debes pagar por lo que me has hecho
+Te voy a enviar a un lugar muy distinto del mundo que conoces
+Y para alguien como tú no va a ser tan fácil escapar
+Así vas a aprender la lección
++p. 2 Personajes/goku.jpg
+¿Qué hago?
+*
+1. Rogar por perdón / 53
+2. Aceptar tu destino / 7
+*
+/
+
+/ 55
+# Evento no despertar
++musica: Música/undertale.ogg 872
++imagen: Imágenes/electrica3.jpg
++p. 1 Personajes/friki.jpg
+¿Estás seguro de que no quieres despertar?
++p. 2 Personajes/goku.jpg
+Si no despierto voy a seguir siendo un fracasado
+¿¿Quiero despertar??
+*
+1. Sí / 4
+2. No & 0
+*
+/
+
+/ 56
+# Evento invocar antepasado 2
++musica: Música/undertale.ogg 1872
++imagen: Imágenes/inf2.jpg
++p. 1 Personajes/friki.jpg
+Intentas usar la Ouija
+Aunque no sabes si en la RED ELÉCTRICA funciona
+...
+¡LO HAS LOGRADO!
++p. 2 Personajes/goku.jpg
+Antepasado ayúdame a salir de aquí
++p. 4 Personajes/antepasado.jpg
+No te mereces mi ayuda
+Tu destino es morir encerrado en la Red
+¡Adiós!
++p. 2 Personajes/goku.jpg
+Estoy perdido
+¿Qué hago?
+*
+1. Usar la Ouija para hablar con alguien más / 57
+2. Rendirme & 0
+*
+/
+
+/ 57
+# Evento invocar tulevieja
++musica: Música/undertale.ogg 2600
++imagen: Imágenes/dark2.png
++p. 1 Personajes/friki.jpg
+Intentas contactar a alguien más
+No esta funcionando
+Estas a punto de rendirte
+...
+De pronto
+LO HAS LOGRADO!
++p. 2 Personajes/goku.jpg
+¿Qué le digo?
+*
+1. ¿Quién eres? / 58
+2. Mátame ya no quiero vivir & 0
+3. ¡Hola! / 60
+*
+/
+
+/ 58
+# Evento hablar tulevieja 2
++musica: Música/undertale.ogg 1600
++imagen: Imágenes/daek2.png
++p. 5 Personajes/tulevieja.jpg
+SOY LA TULEVIEJA
+No me gusta hablar con las personas
+¿Para qué me has contactado?
++p. 2 Personajes/goku.jpg
+¿Qué le digo?
+*
+1. Necesito que me ayudes a salir de aquí / 59
+2. Mátame ya no quiero vivir & 0
+3. Solo quería saludar / 60
+*
+/
+
+/ 59
+# Evento hablar tulevieja 3
++musica: Música/undertale.ogg 540
++imagen: Imágenes/dark2.png
++p. 5 Personajes/tulevieja.jpg
+¿Me invocaste para eso?
+La solución a tu problema es demasiado simple
+Pero no te la voy a decir tan fácilmente
+Te voy a dar dos opciones
+Una te va sacar de aquí
+Y la otra te va a asesinar inmediatamente
++p. 2 Personajes/goku.jpg
+¿Cuáles son las opciones?
++p. 5 Personajes/tulevieja.jpg
+La primera es chasquear los dedos
+La segunda es aplaudir tres veces
++p. 2 Personajes/goku.jpg
+¿Qué hago?
+*
+1. Chasquear los dedos & 1
+2. Aplaudir tres veces & 0
+*
+/
+
+/ 60
+# Evento hablar tulevieja 3
++musica: Música/undertale.ogg 750
++imagen: Imágenes/dark2.png
++p. 5 Personajes/tulevieja.jpg
+¿Me invocaste para eso?
+¿Crees que no tengo nada más que hacer?
+Lo que hiciste no tiene perdón
+Como castigo te dejaré encerrado en la Red para siempre
++p. 1 Personajes/friki.jpg
+¿Quieres comenzar de nuevo?
+*
+1. Sí / 0
+2. No & 0
+*
+/
+
+/ 61
+# Evento hablar tulevieja cambiar nota
++musica: Música/undertale.ogg 140
++imagen: Imágenes/dark2.png
++p. 5 Personajes/tulevieja.jpg
+No puedo arreglar tu nota 
+Porque ya tu nota ha sido corregida
++p. 2 Personajes/goku.jpg
+Entré a la Red para nada
+Y ahora estoy aquí encerrado
+Mi vida no tiene sentido
+¿Que hago?
+*
+1. Pedir ayuda a la Tulevieja para escapar / 59
+2. Rendirme & 0
+*
+/
+
+/ 62
+# Evento Usar la ouija
++musica: Música/undertale.ogg 200
++imagen: Imágenes/ouija.jpg
++p. 1 Personajes/friki.jpg
+Intentas usar la Ouija
+Logras hacer contacto con alguien
+...
+Es la Tulevieja
++p. 2 Personajes/goku.jpg
+¿Hablo con la Tulevieja?
+*
+1. Sí / 63
+2. Contactar a alguien más / 64
+*
+/
+
+/ 63
+# Evento tulevieja cambiar nota 2
++musica: Música/undertale.ogg 1500
++imagen: Imágenes/ouija.jpg
++p. 2 Personajes/goku.jpg
+¿Qué le digo?
+*
+1. Ayúdame a cambiar la mi nota / 61
+2. Hola / 60  
+*
+/
+
+/ 64
+# Evento invocar pisuicas
++musica: Música/undertale.ogg 1700
++imagen: Imágenes/ouija.jpg
++p. 1 Personajes/friki.jpg
+Sigues usando la Ouija
+Sientes la presencia de muchos espíritus
+...
+Contactas a uno
++p. 2 Personajes/goku.jpg
+¿Qué le digo?
+*
+1. ¿Quién eres? / 65
+2. Hola / 69
+3. Ayúdame a cambiar mi nota / 66
+*
+/
+
+/ 65
+# Evento pisuicas 
++musica: Música/undertale.ogg 850
++imagen: Imágenes/ouija.jpg
++p. 6 Personajes/pisuicas.jpg
+SOY EL PUSICAS
+¿Para qué me has llamado?
+*
+1. Solo quería saludarte / 69
+2. Me rindo, solo mátame & 0
+3. Ayúdame a cambiar mi nota / 66
+*
+/
+
+/ 66
+# Evento pisuicas 2
++musica: Música/undertale.ogg 1850
++imagen: Imágenes/ouija.jpg
++p. 6 Personajes/pisuicas.jpg
+Tu nota no es mi problema
+No me interesa
+No te voy a ayudar
+*
+1. Rogar para que te ayude / 68
+2. Rendirse & 0
+3. Olvidar la nota y pedir ayuda para salir / 67
+*
+/
+
+/ 67
+# Evento pisuicas 3
++musica: Música/undertale.ogg 500
++imagen: Imágenes/ouija.jpg
++p. 6 Personajes/pisuicas.jpg
+Te voy a ayudar con esto solo porque tu presencia me molesta
+Para escapar de la Red
+Solamente debes chasquear los dedos
+¡Y listo!
+*
+1. Contactar a la Tulevieja para cambiar la nota / 61 
+2. Chasquear los dedos & 1
+*
+/
+
+/ 68
+# Evento pisuicas 4
++musica: Música/undertale.ogg 1260
++imagen: Imágenes/ouija.jpg
++p. 6 Personajes/pisuicas.jpg
+Te voy a ayudar con esto solo porque tu presencia me molesta
+Para escapar de la Red
+Solamente debes chasquear los dedos
+¡Y Listo!
+*
+1. Contactar a la Tulevieja para cambiar la nota / 61 
+2. Chasquear los dedos & 2
+*
+/
+
+/ 69
+# Evento pisuicas 5
++musica: Música/undertale.ogg 1360
++imagen: Imágenes/ouija.jpg
++p. 6 Personajes/pisuicas.jpg
+¿¿¿Me llamaste solo para decirme eso???
+¿¿CREES QUE TENGO TIEMPO PARA SALUDAR A PERDEDORES COMO TU??
+Ahora te vas a quedar encerrado en esta Red para siempre
+De todas formas nadie te va a extrañar
++p. 1 Personajes/friki.jpg
+¿Quieres comenzar de nuevo?
+*
+1. Sí / 0
+2. No & 0
+*
+/
+
+
+#Finales
+
+& 0
+#FINALFINALFINAL
++musica: Música/undertale.ogg 3342
++imagen: Imágenes/over.png
++p. 1 Personajes/friki.jpg
+Inútil
+.
+& 1
+#GANAR
++musica: Música/undertale.ogg 3342
++imagen: Imágenes/winner.jpg
++p. 1 Personajes/friki.jpg
+¡¡¡Has logrado salir de la Red!!!
+¡¡Felicidades!!
+.
+
+
+
+#El "<>" es para indicar el fin del archivo de texto.
+<>

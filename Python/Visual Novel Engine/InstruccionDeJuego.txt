@@ -1,0 +1,201 @@
+###########################		Instrucciones generales:	      ###########################
+
+#El "#" al inicio de una línea es para comentar el archivo.
+
+#Los espacios en blanco no afectan, pues no son tomados en cuenta.
+
+#El "@" es el marcador de la pantalla de inicio del juego
+
+#Para agregar personajes a la historia puede seguir el siguiente bloque: 
+#
+#                            personaje 1: Narrador
+#                            personaje 2: Goku
+#                            personaje 3: Nikola Tesla
+#                            personaje 4: Tulevieja
+#                            - 
+
+
+###########################			Eventos			      ###########################
+
+#Para crear un evento se inicia con "/ w" donde w es el número de evento y para terminarlo se escribe solamente "/" 
+#Para invocar un personaje  evento agregar "+p. n r" donde n, es el número de personaje, y r es la ruta de la imagen del #personaje, respetando espacios y puntos 
+#Para invocar una imagen en el evento es necesario escribir al inicio "+imagen: r" con r como la ruta del archivo
+#Para invocar una música en el evento es necesario escribir al inicio "+musica: r s" con r como la ruta del archivo y s como el #segundo
+#El texto no necesita un marcador especial y se coloca a preferencia del usuario
+
+#Para establecer opciones debe seguir el siguiente bloque:
+
+#					*
+#					1. Opcion / n
+#					2. Opcion / &
+#					*
+
+# Nota: Cada opción tiene una ruta a dirigirse puede ser a un evento final o un evento de trancisión
+	Un bloque de evento final comienza con "& n" y debe terminar con "." (Con n como numero de evento final) 
+
+###########################		Personalización de la interfaz	      ###########################
+
+
+#Se escribe los valores deseados para cada campo, las rutas de la música o imágenes, color del texto o tipo de fuente
+
+
+
+
+#Parámetros de la pantalla de inicio del juego.
+
+TITULO_DEL_JUEGO: Age of Empires
+ANCHO: 900
+LARGO: 680
+
+
+
+#La caja es el ancho de la ventana donde imprime el texto
+
+CAJA: 150
+MUSICA: Música/empires3.ogg
+IMAGENES: Imágenes/empires.jpg
+VENTANA_DE_TEXTO: Imágenes/frame1.png
+FUENTE: gentiumbasic
+
+#El color de fuente debe estar en formato RGB
+
+
+COLOR_TEXTO: 0 0 0
+COLOR_NOMBRE: 0 255 0
+COLOR_BOTONES: 255 255 0
+COLOR_MENU: 255 255 255
+COLOR_SELECCION: 255 0 0
+
+#Cambia el tamaño de la letra
+
+
+TAMANO_LETRA_MENU: 90
+TAMANO_LETRA_TEXTO: 20
+TAMANO_LETRA_NOMBRE: 32
+TAMANO_LETRA_OPCIONES: 30
+
+
+###########################		EJEMPLO DE AVENTURA DE TEXTO	      ###########################
+
+
+
+#El "@" es el marcador de la pantalla de inicio del juego
+@
+
+#Personajes
+personaje 1: Sebas
+personaje 2: Nati
+personaje 3: Jose
+-
+
+#Historia
+
+/ 0
++musica: musica/empires3.ogg
+Bienvenido a un mundo mágico de magia y encanto.
+Estás en un cuarto con tres puertas numeradas 1,2 y 3.
+¿Qué quieres hacer?
+
+*
+1. Morir & 0
+#Al final de casa decisión, se pone un marcador y el bloque de historia hacia donde lleva esa decición. El marcador y el número deben estar separados por un espacio.
+2. Dormir & 1
+3. Comer / 4
+4. Estudiar & 3
+5. Entrar en alguna puerta / 1
+*
+#Todos los bloques de historia deben estar numerados y escritos entre dos "/". Todas las decisiones adentro de un bloque de historia deben estar escritas entre dos "*".
+/
+
+/ 1
+Decides entrar en una de las puertas.
+¿En cuál puerta quieres entrar?
+*
+1. La puerta 1 / 2
+2. La puerta 2 & 4
+3. La puerta 3 & 5
+*
+/
+
+/ 2
+Esa puerta está cerrada
+¿Qué quieres hacer?
+*
+1. Morir & 0
+2. Dormir & 1
+3. Comer / 4
+4. Estudiar & 3
+5. Entrar en otra puerta / 1
+6. Buscar la llave de la primera puerta / 3
+*
+/
+
+/ 3
+Intentas buscar la llave, pero está muy oscuro
+¿Qué quieres hacer?
+*
+1. Morir & 0
+2. Dormir & 1
+3. Comer / 4
+4. Estudiar & 3
+5. Entrar en otra puerta / 1
+*
+/
+
+/ 4
+¿Qué quieres comer?
+*
+1. Pizza & 2
+2. Tamales / 5
+*
+/
+
+/ 5
+Los tamales están detras de la puerta 1.
+¿Qué quieres hacer?
+*
+1. Morir & 0
+2. Dormir & 1
+3. Comer / 4
+4. Estudiar & 3
+5. Entrar en una puerta / 1
+*
+/
+
+#Finales
+#El "." es para indicar que la historia se ha acabado y el juego termina
+
+& 0
++musica: musica/7.ogg
+JAJAJAJA HAS MUERTO
+.
+
+& 1
++musica: musica/7.ogg
+Un monstruo te asesina mientras duermes y mueres dolorosamente
+Qué mal :(
+.
+
+& 2
++musica: musica/7.ogg
+Te atragantas y mueres
+.
+
+& 3
++musica: musica/7.ogg
+Mueres estudiando
+.
+
+& 4
++musica: musica/7.ogg
+La puerta está cerrada. Te deprimes. Después de un tiempo mueres
+.
+
+& 5
++musica: musica/champions.ogg
+Encuentras algo hermoso
+¡¡¡HAS GANADO!!!!
+.
+
+#El "<>" es para indicar el fin del archivo de texto.
+<>
