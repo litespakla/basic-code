@@ -9,7 +9,7 @@ def prueba(solucion, dic):
     for num in solucion:
         x+=num
         #x*=num
-    if x==pow(solucion[len(solucion)-1], 2):
+    if x==2*solucion[len(solucion)-1]:
         print solucion, dic
 
 alpha=raw_input('Enter alphametic\n')
